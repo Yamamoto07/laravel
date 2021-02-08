@@ -1,0 +1,10 @@
+
+body {font-size:1em; color:#999; margin:0.3125em;}
+h1 {font-size:3.125em; text-align:right; color:#f6f6f6;}
+ul {font-size:1em;}
+hr {border-top: 0.0625em #ddd;}
+th {background-color:#999; color:#fff; padding:0.3125em 0.625em;}
+td {border:solid 0.025em #aaa; color:#999; padding:0.3125em 0.625em;text-align:right;}
+.menutitle {font-size:0.875em; font-weight:bold; margin:0;}
+.footer {text-align:right; font-size:0.83em; margin:0.625em;
+    border-bottom:solid 0.0625 #ccc; color:#ccc;}

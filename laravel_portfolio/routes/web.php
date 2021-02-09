@@ -18,3 +18,16 @@ Route::get('/', function () {
 });
 
 Route::get('/index', 'App\Http\Controllers\AppController@index');
+Route::get('food', 'App\Http\Controllers\FoodController@index');
+Route::get('food/find', 'App\Http\Controllers\FoodController@find');
+Route::post('food/find', 'App\Http\Controllers\FoodController@search');
+Route::get('food/add', 'App\Http\Controllers\FoodController@add');
+Route::post('food/add', 'App\Http\Controllers\FoodController@create');
+Route::get('food/edit', 'App\Http\Controllers\FoodController@edit')
+    ->name('food_edit');
+Route::post('food/edit', 'App\Http\Controllers\FoodController@update')
+    ->name('food_update');
+Route::get('food/delete', 'App\Http\Controllers\FoodController@delete')
+    ->name('food_delete');
+Route::post('food/delete', 'App\Http\Controllers\FoodController@remove')
+    ->name('food_delete');

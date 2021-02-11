@@ -8,7 +8,8 @@
 @endsection
 
 @section('content')
-    <form action="/food/edit" method="get">
+    <!--<form action="/food/edit" method="get"> -->
+
     <table align="center" >
     <tr><th>食材名</th><th>数量</th><th>その他</th></tr>
     @foreach ($items as $item)

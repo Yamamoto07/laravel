@@ -8,6 +8,8 @@
 @endsection
 
 @section('content')
+    <p>controller value<br>'message' = {{$message}}</p>
+    <p>viewcomposer value<br>'view_message' = {{$view_message}}</p>
     <table align="center">
     <tr><th>Name</th><th>Quantity</th><th>Unit</th></tr>
     @foreach ($items as $item)

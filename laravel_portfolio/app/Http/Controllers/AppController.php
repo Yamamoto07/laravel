@@ -10,6 +10,11 @@ class AppController extends Controller
     public function index(request $request)
     {
 	$items =  DB::table('food')->get();
+        return view('index.index', ['items' => $items], ['message'=>'Hello!']);
+    }
+
+    public function post(request $request)
+    {
         return view('index.index', ['items' => $items]);
     }
 

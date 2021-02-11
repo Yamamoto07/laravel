@@ -10,21 +10,27 @@
 @section('content')
     @if (count($errors) > 0)
     <div>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
+        <p>ERROR</p>
+        <p>入力に問題があります。再入力してください。</p>
     </div>
     @endif
-    <form action="{{route('food_update')}}" method="post">
+    <form action="/food/edit" method="post">
     <table>
-    @csrf <!-- HTMLを直接記載するときは、@csrfを記載する。 -->
-        <input type="hidden" name="id" value="{{$form->id}}">
+        @csrf <!-- HTMLを直接記載するときは、@csrfを記載する。 -->
+	<input type="hidden" name="id" value="{{$form->id}}">
+        @error('name')
+        <p>・{{$message}}</p>
+        @enderror
 	<tr><th>食材名: </th><td><input type="text" name="name"
-            value="{{$form->name}}"</td></tr>
+	    value="{{$form->name}}"</td></tr>
+        @error('quantity')
+	<p>・{{$message}}</p>
+        @enderror
 	<tr><th>量： </th><td><input type="number" name="quantity"
-            value="{{$form->quantity}}"></td></tr>
+	    value="{{$form->quantity}}"></td></tr>
+        @error('unit')
+	<p>・{{$message}}</p>
+        @enderror
 	<tr><th>単位: </th><td><input type="text" name="unit"
             value="{{$form->unit}}"></td></tr>
         <tr><th></th><td><input type="submit"

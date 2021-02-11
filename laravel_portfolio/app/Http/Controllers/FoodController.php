@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
+use App\Http\Requests\FoodRequest;
 use Illuminate\Http\Request;
 
 class FoodController extends Controller
@@ -12,6 +13,18 @@ class FoodController extends Controller
 	$items = Food::all();
 	return view('food.index', ['items' => $items]);
     }
+
+   // public function post(FoodRequest $request)
+   // {
+
+//	$validate_rule = [
+//	    'name' => 'required',
+//	    'quantity' => 'numeric|between:0,9999',
+//	    'unit' => 'required'
+//	];
+//	$this->validate($request, $validate_rule);
+//	return view('food.index',['items' => $items]);
+  //  }
 
     public function find(Request $request)
     {
@@ -28,11 +41,14 @@ class FoodController extends Controller
 
     public function add(Request $request)
     {
+
 	return view('food.add');
     }
 
-    public function create(Request $request)
-    {
+    // FoodRequestに設定した内容を元にバリデーションが実行するため、
+    // FoodRequest $requestの引数を渡す。
+    public function create(FoodRequest $request)
+    {    
 	$this->validate($request, Food::$rules);
 	$food = new Food;
 	$form = $request->all();
@@ -47,7 +63,9 @@ class FoodController extends Controller
 	return view('food.edit', ['form' => $food]);
     }
 
-    public function update(Request $request)
+    // FoodRequestに設定した内容を元にバリデーションが実行するため、
+    // FoodRequest $requestの引数を渡す。
+    public function update(FoodRequest $request)
     {
 	// バリデーションを実行    
 	$this->validate($request, Food::$rules);

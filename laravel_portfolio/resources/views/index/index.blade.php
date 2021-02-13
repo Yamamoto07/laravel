@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.foodapp')
 
 @section('title', 'Index')
 
@@ -8,6 +8,14 @@
 @endsection
 
 @section('content')
+    @if (Auth::check())
+    <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
+    <p>ログイン<a href="/login">ログイン</a>
+    <p>登録<a href="/register">登録</a></p>
+    @else
+    <p>※ログインしていません。(<a href="/login">ログイン</a>|
+        <a href="/register">登録</a>)</p>
+    @endif
     <p>controller value<br>'message' = {{$message}}</p>
     <p>viewcomposer value<br>'view_message' = {{$view_message}}</p>
     <table align="center">

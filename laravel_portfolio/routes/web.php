@@ -37,3 +37,14 @@ Route::post('food/delete', 'App\Http\Controllers\FoodController@remove')
     ->name('food_delete');
 Route::post('index', 'App\Http\Controllers\FormController@validate');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('index', 'App\Http\Controllers\AppController@index')
+    ->middleware('auth');
+Route::get('index/auth', 'App\Http\Controllers\AppController@getAuth');
+Route::post('index/auth', 'App\Http\Controllers\AppController@postAuth');
+// ゲストユーザーログイン
+Route::get('guest', 'App\Http\Controllers\Auth\LoginController@guestLogin')->name('login.guest');

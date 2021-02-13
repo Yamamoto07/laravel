@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.foodapp')
 
 @section('title', 'Food.index')
 
@@ -22,7 +22,7 @@
         </tr>
     @endforeach
     </table>
-    </form>
+    {{$items->links()}}
 @endsection
 
 @section('footer')

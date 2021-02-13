@@ -3,28 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\FoodRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FoodController extends Controller
 {
     public function index(Request $request)
     {
-	$items = Food::all();
+	$items = DB::table('food')->simplePaginate(10);
 	return view('food.index', ['items' => $items]);
     }
-
-   // public function post(FoodRequest $request)
-   // {
-
-//	$validate_rule = [
-//	    'name' => 'required',
-//	    'quantity' => 'numeric|between:0,9999',
-//	    'unit' => 'required'
-//	];
-//	$this->validate($request, $validate_rule);
-//	return view('food.index',['items' => $items]);
-  //  }
 
     public function find(Request $request)
     {

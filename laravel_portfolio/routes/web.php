@@ -47,4 +47,6 @@ Route::get('index', 'App\Http\Controllers\AppController@index')
 Route::get('index/auth', 'App\Http\Controllers\AppController@getAuth');
 Route::post('index/auth', 'App\Http\Controllers\AppController@postAuth');
 // ゲストユーザーログイン
-Route::get('guest', 'App\Http\Controllers\Auth\LoginController@guestLogin')->name('login.guest');
+Route::get('index', 'App\Http\Controllers\Auth\LoginController@guestLogin')->name('login_guest');
+// ゲストユーザーログアウト
+Route::post('index', 'App\Http\Controllers\Auth\LoginController@guestLogout')->name('logout_guest');

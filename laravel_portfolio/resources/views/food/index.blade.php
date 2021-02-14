@@ -4,12 +4,11 @@
 
 @section('menubar')
     @parent
-    新規作成ページ
 @endsection
 
 @section('content')
     <!--<form action="/food/edit" method="get"> -->
-
+<h1>食材一覧</h1>
     <table align="center" >
     <tr><th>食材名</th><th>数量</th><th>その他</th></tr>
     @foreach ($items as $item)

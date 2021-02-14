@@ -1,3 +1,4 @@
+// デフォルト
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -6,3 +7,37 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+// ここから下記を追加
+//.bavbar-laravel {
+//  background-color: #fff;
+//  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.04);
+//}
+
+//html {
+//  font-family: sans-serif;
+//  line-height: 1.15em;
+//}
+
+//body {
+//  font-size: 1em;
+//  font-family: apple-system, BlinkMacSystemFont, Segoe UI Helvetica Neue, Hiragino KaKu Gothic ProN, "メイリオ", meiryo, sans-serif;
+//  font-weight: 400em;
+//}
+
+//nav {
+//  background-color: #55C501 !important;
+//  #Navber {
+//    .bavbar-bav {
+//      .nav-item {
+      // ボタンの背景色の指定
+//        #post-link {
+//          backGround-color: #367E00;
+//	  border-radius: 5px;
+//	  padding-left: 1em;
+//	  padding-right: 1em;
+//       }
+//      }
+//    }
+//  }    

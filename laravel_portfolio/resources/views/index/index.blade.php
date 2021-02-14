@@ -10,11 +10,11 @@
 @section('content')
     @if (Auth::check())
     <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
-    <p>ログイン<a href="/login">ログイン</a>
-    <p>登録<a href="/register">登録</a></p>
+    <p>ログイン<a href="#">ログイン</a>
+    <p>登録<a href="#">登録</a></p>
     @else
-    <p>※ログインしていません。(<a href="/login">ログイン</a>|
-        <a href="/register">登録</a>)</p>
+    <p>※ログインしていません。(<a href="{{route('login_guest')}}">ログイン</a>|
+        <a href="#">ユーザー登録</a>)</p>
     @endif
     <p>controller value<br>'message' = {{$message}}</p>
     <p>viewcomposer value<br>'view_message' = {{$view_message}}</p>

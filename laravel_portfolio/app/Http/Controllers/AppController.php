@@ -24,14 +24,14 @@ class AppController extends Controller
 
     public function getAuth(Request $request)
     {
-	 $param = ['message' => 'ログインしてください'];
+	 $param = ['message' => 'ログインしてください。'];
 	 return view('index.auth', $param);
     }
 
     public function postAuth(Request $request)
     {
 	$email = $request->email;
-	$password = $request->password;
+	$password = $request->password;;
 	if (Auth::attempt(['email' => $email,
 		  'password' => $password])) {
             $user = Auth::user();
@@ -39,7 +39,7 @@ class AppController extends Controller
 	    $param = ['items' => $items, 'user' => $user];
 	    return view('index.index', $param, ['message' => 'ログイン中']);
 	} else {
-	    $msg = 'ログインに失敗しました。';
+            $msg = 'メールアドレスとパスワードを入力してください。';
 	}
 	return view('index.auth', ['message' => $msg]);
     }

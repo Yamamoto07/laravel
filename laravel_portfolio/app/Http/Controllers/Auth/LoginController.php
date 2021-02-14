@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth; //追加
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -58,4 +59,11 @@ class LoginController extends Controller
 
 	return view('index.auth', ['message' => $msg]);
     }
+
+   // ゲストログアウト処理
+   public function guestLogout()
+   {
+       Auth::logout();
+       return redirect();
+   }
 }

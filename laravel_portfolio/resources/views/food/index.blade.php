@@ -1,14 +1,16 @@
 @extends('layouts.foodapp')
 
-@section('title', 'Food.index')
+@section('title', '食材編集')
 
 @section('menubar')
     @parent
 @endsection
 
 @section('content')
-    <!--<form action="/food/edit" method="get"> -->
-<h1>食材一覧</h1>
+    <div class="backpage">
+      <a href="/index">戻る</a>
+    </div>
+    <h1>@yield('title')</h1>
     <table align="center" >
     <tr><th>食材名</th><th>数量</th><th>その他</th></tr>
     @foreach ($items as $item)
@@ -22,6 +24,11 @@
     @endforeach
     </table>
     {{$items->links()}}
+    <button id="btn-add" class="btn btn-success">
+      <a href="./add" class="text-white">
+        食材追加
+      </a>
+    </button>
 @endsection
 
 @section('footer')

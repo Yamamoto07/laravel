@@ -12,7 +12,7 @@ class FoodController extends Controller
 {
     public function index(Request $request)
     {
-	$items = DB::table('food')->simplePaginate(10);
+	$items = DB::table('food')->simplePaginate(5);
 	return view('food.index', ['items' => $items]);
     }
 

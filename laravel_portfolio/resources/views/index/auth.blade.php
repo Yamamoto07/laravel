@@ -2,11 +2,6 @@
 
 @section('title', 'ユーザ認証')
 
-@section('menubar')
-   @parent
-   ユーザー認証ページ
-@endsection
-
 @section('content')
 <div id="login-error">
 </div>

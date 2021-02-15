@@ -13,6 +13,10 @@ body {
   font-size: 1.5em; 
 }
 
+h5 {
+  font-size: 1.5em;
+}
+
 ul {
   font-size: 1em;
 }
@@ -22,14 +26,13 @@ hr {
 }
 
 th {
-  background-color: #999;
+  background-color: #007bff;
   color: #fff;
   padding: 0.3125em 0.625em;
 }
 
 td {
   border: solid 0.025em #aaa;
-  color: #999;
   padding: 0.3125em 0.625em;
   text-align: right;
 }
@@ -37,7 +40,7 @@ td {
 #header  {
   height: 4em;
   background-color: #007bff;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 #header-wrapper {
@@ -138,4 +141,39 @@ input {
 #login-register {
   display: block;
   margin-bottom: 1em; 
+}
+
+#food-index {
+  margin-bottom: 1em;
+}
+
+.user-name p {
+  text-align: left;
+  color: #ddd;
+}
+
+#btn-add {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.justify-between {
+  margin-top: 1em;
+}
+
+.backpage {
+  text-align: left;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-alert {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.delete-message {
+  color: red; 
 }

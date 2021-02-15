@@ -11,7 +11,7 @@ class AppController extends Controller
     public function index(request $request)
     {
 	$user = Auth::user();
-	$items = DB::table('food')->get();
+	$items = DB::table('food');
 	// $user,$itemsを配列$paramに格納してviewに渡す。
 	$param = ['items' => $items, 'user' => $user];
         return view('index.index', $param, ['message' => 'Hello!']);

@@ -38,9 +38,9 @@ class FoodRequest extends FormRequest
     public function messages()
     {
 	return [
-	    'name.required' => '名前を入力してください。',
-	    'quantity.between' => '0~9999の間の整数を入力してください。',
-	    'quantity.numeric' => '0~9999の間の整数を入力してください。',
+	    'name.required' => '食材名を入力してください。',
+	    'quantity.between' => '整数を入力してください。',
+	    'quantity.numeric' => '整数を入力してください。',
 	    'unit.required' => '単位を入力してください。'
 	];
     }

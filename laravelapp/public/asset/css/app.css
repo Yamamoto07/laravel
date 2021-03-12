@@ -1,0 +1,55 @@
+body {
+  font-size: 1em;
+  color: #999;
+  margin: 0.3125em;
+}}
+h1 {
+  height: 3em;
+  font-size: 3.125em;
+  text-align: right;
+  color: #f6f6f6;
+  margin: -1em 0 -1em 0;
+  letter-spacing: -0.25em;
+}
+h2 {
+  height: 2em;
+}
+ul {
+  font-size: 0.75em;
+}
+hr {
+  margin: 1.56em 6.25em;
+  border-top: 0.0625em dashed #ddd;
+}
+.menutitle {
+  font-size: 0.87em;
+  font-weight: bold;
+  margin: 0em;
+}
+.content {
+  margin: 0.625em;
+}
+.footer {
+  text-align: right;
+  font-size: 0.625em;
+  margin: 0.625em;
+  border-bottom: solid 0.0625em #ccc;
+  color: #ccc;
+}
+
+.pagination {
+  font-size: 0.625em;
+}
+.pagination li {
+  display: inline-block;
+}
+.w-5 {
+  font-size: 0.3em;
+  height: 4em;
+}
+.flex-1 {
+  display: none;
+}
+#text{
+  display: none;
+}

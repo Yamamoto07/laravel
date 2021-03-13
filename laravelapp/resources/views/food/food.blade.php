@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
 @section('title', 'food')
 
@@ -8,6 +8,12 @@
 @endsection
 
 @section('content')
+    @if (Auth::check())
+    <p>USER：{{$user->name . ' (' . $user->email . ')'}}</p>
+    @else
+    <p>※ログインしていません。(<a href="/login">ログイン</a>|
+        <a href="/register">登録</a>)</p>
+    @endif
     <table>
     <tr><th>名前</th><th>数量</th><th>賞味期限</th></tr>
         @foreach ($items as $item)
@@ -16,7 +22,7 @@
              <td>{{$item->quantity}}{{$item->unit}}</td>
              <td>{{$item->limit}}</td>
 	</tr>
-        @endforeach
+	@endforeach
     </table>
     {{$items->links()}}
 @endsection

@@ -6,18 +6,21 @@ use Illuminate\Http\Request;
 use App\Http\Requests\AppRequest;
 use Illuminate\Support\Facades\DB;
 use App\Models\Food;
+use Illuminate\Support\Facades\Auth;
 
 class FoodController extends Controller
 {
     public function index(Request $request)
     {
+	$user = Auth::user();
 	if(!$request->sort) {
 	    $sort = "limit";
 	} else {
             $sort = $request->sort;
         }
 	$items = Food::orderBy($sort, 'asc')->Paginate(10);
-	$param = ['items' => $items, 'sort' => $sort];
+	$param = ['items' => $items, 'sort' => $sort,
+	    'user' => $user];
 	return view('food.food', $param);
     }
 

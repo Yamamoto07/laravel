@@ -25,3 +25,10 @@ Route::get('food/delete', 'App\Http\Controllers\FoodController@delete')
     ->name('food_delete');
 Route::post('food/delete', 'App\Http\Controllers\FoodController@remove')
     ->name('food_remove');
+
+Route::get('food', 'App\Http\Controllers\FoodController@index')
+    ->middleware('auth');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

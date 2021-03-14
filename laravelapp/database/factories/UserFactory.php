@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\Food;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -44,4 +45,14 @@ class UserFactory extends Factory
             ];
         });
     }
+    
+    $factory->define(Food::class, function (Faker $faker) {
+        return [
+	    'name' => $faker->name,
+            'quantity' => random_int(0,10000);
+            'unit' => $faker->unit,
+	    'limit' => $faker->dateTimeBetween('1day', '1year')->format('Y/m/d');
+	];
+    }
+
 }

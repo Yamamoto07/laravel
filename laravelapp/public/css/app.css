@@ -72,7 +72,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #f8fafc;
 }
 
@@ -98,7 +98,8 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 abbr[title],
@@ -222,6 +223,8 @@ svg {
 
 table {
   border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 1em ;
 }
 
 caption {
@@ -235,6 +238,14 @@ caption {
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
+  background-color: #6cb2eb;
+  border: solid 0.063em;
+  padding: 0.3em 0.63em;
+}
+
+td {
+  border: solid 0.063em;
+  padding: 0.3em 0.63em;
 }
 
 label {
@@ -584,6 +595,42 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+#user-name {
+  display: inline-block;
+  text-align: left;
+}
+.pagination {
+  font-size: 0.625em;
+}
+.pagination li {
+  display: inline-block;
+}
+.w-5 {
+  height: 1.2em;
+}
+.footer {
+  text-align: right;
+  color: #999;
+}
+ul {
+  list-style: none;
+}
+.error-messages {
+  text-align: left;
+  color: #e3342f;
+}
+#btn-add {
+  margin-bottom: 0.3em;
+}
+#btn-back {
+  text-align: left;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+.delete-message {
+  color: #e3342f;
 }
 
 @media (min-width: 576px) {
@@ -3414,7 +3461,7 @@ input[type=button].btn-block {
   margin: 0.125rem 0 0;
   font-size: 0.9rem;
   color: #212529;
-  text-align: left;
+  text-align: right;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
@@ -4880,6 +4927,7 @@ input[type=button].btn-block {
 
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.5);
+  text-align: right;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,

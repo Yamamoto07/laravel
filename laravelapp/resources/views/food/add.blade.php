@@ -21,11 +21,16 @@
    <form action="{{route('food_add')}}" method="post">
    <table align="center">
       @csrf
-      <tr><th>食材名</th><td><input type="text" name="name" value="{{old('name')}}"></td></tr>
-      <tr><th>数量</th><td><input type="text" name="quantity" value="{{old('quantity')}}"></td></tr>
-      <tr><th>単位</th><td><input type="text" name="unit" value="{{old('unit')}}"></td></tr>
-      <tr><th>賞味期限<br>(記入例：2021/3/5)</th><td><input type="text" name="limit" value="{{old('limit')}}"></td></tr>
-      <tr><th></th><td><input type="submit" value="追加" class="btn btn-primary"></td></tr>
+      <tr><th>食材名</th><td><input type="text" name="name"
+          value="{{old('name')}}"></td></tr>
+      <tr><th>数量</th><td><input type="text" name="quantity"
+          value="{{old('quantity')}}"></td></tr>
+      <tr><th>単位</th><td><input type="text" name="unit"
+          value="{{old('unit')}}"></td></tr>
+      <tr><th>賞味期限<br>(記入例：2021/3/5)</th><td><input type="text"
+          name="limit" value="{{old('limit')}}"></td></tr>
+      <tr><th></th><td><input type="submit" value="追加"
+          class="btn btn-primary"></td></tr>
    </table>
    </form>
 @endsection

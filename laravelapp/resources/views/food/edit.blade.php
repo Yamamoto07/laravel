@@ -30,12 +30,13 @@
             value="{{$form->unit}}"></td></tr>
 	<tr><th>賞味期限<br>(記入例：2021/3/5)</th><td><input type="text" name="limit"
             value="{{$form->limit}}"></td></tr>
-        <tr><th></th><td><input type="submit"
-　　　　　　value="変更"></td></tr>
+	<tr><th></th><td><input type="submit" value="変更"
+            class="btn btn-success"></td></tr>
    </table>
    </form>
 @endsection
 
 @section('footer')
+<hr>
 copyright 2021 yamamoto.
 @endsection

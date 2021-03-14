@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+ * 一覧、追加、更新、削除の画面へのRouteの設定。
+ */
 Route::get('food', 'App\Http\Controllers\FoodController@index');
 Route::get('food/add', 'App\Http\Controllers\FoodController@add')
     ->name('food_add');
@@ -30,6 +30,9 @@ Route::get('food/delete', 'App\Http\Controllers\FoodController@delete')
 Route::post('food/delete', 'App\Http\Controllers\FoodController@remove')
     ->name('food_remove');
 
+/*
+ * ログインしていない状態でアクセスできないように、Authを設定。
+ */
 Route::get('food', 'App\Http\Controllers\FoodController@index')
     ->middleware('auth');
 Route::get('food/add', 'App\Http\Controllers\FoodController@add')
@@ -40,6 +43,3 @@ Route::get('food/delete', 'App\Http\Controllers\FoodController@delete')
     ->middleware('auth')->name('food_delete');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-

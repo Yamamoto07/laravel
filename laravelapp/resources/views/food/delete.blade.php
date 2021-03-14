@@ -33,5 +33,6 @@
 @endsection
 
 @section('footer')
+<hr>
 copyright 2021 yamamoto.
 @endsection

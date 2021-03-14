@@ -18,7 +18,7 @@ class FoodController extends Controller
 	} else {
             $sort = $request->sort;
         }
-	$items = Food::orderBy($sort, 'asc')->Paginate(10);
+	$items = Food::orderBy($sort, 'asc')->Paginate(7);
 	$param = ['items' => $items, 'sort' => $sort,
 	    'user' => $user];
 	return view('food.food', $param);

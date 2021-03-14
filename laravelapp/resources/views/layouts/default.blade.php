@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'laravel') }}</title>
+    <title>{{ config('app.name', 'laravel') }}/@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -79,6 +79,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <div class="footer">
+            @yield('footer')
+        </div>
     </div>
 </body>
 </html>
